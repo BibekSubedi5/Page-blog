@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className='bg-black flex justify-center items-center w-full h-screen'>
-  <h1 className='text-red-700 '>hello worlds</h1>
+  <h1 className='text-red-700 '>hello world</h1>
     </div>
   )
 }
