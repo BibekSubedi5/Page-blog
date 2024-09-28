@@ -9,6 +9,6 @@ const Config ={
 
 
 }
-console.log(appwriteUrl)
+console.log(Config.appwriteUrl)
 export default Config
 
