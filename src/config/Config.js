@@ -8,7 +8,9 @@ const Config ={
 
 
 
-}
-console.log(Config.appwriteUrl)
+};
+
+
+
 export default Config
 

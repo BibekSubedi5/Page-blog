@@ -38,7 +38,7 @@ import Config from "../config/Config";
 
       
      }
-     async updatePost(uniqueId,{title,featuredImage,status,userId}){
+     async updatePost(uniqueId,{title,featuredImage,status,userId,content}){
         try {
             return await this.databases.updateDocument(
                 Config.databaseid,
@@ -86,8 +86,8 @@ import Config from "../config/Config";
      async getPosts(queries = [Query.equal("status", "active")]){
         try {
             return await this.databases.listDocuments(
-                Conf.databaseid,
-                Conf.collectionid,
+                Config.databaseid,
+                Config.collectionid,
                 queries,
                 
 
@@ -126,13 +126,13 @@ import Config from "../config/Config";
     }
     getFilePreview(fileId){
         return this.storage.getFilePreview(
-            Conf.bucketid,
+            Config.bucketid,
             fileId
         )
     }
   }
 
-  const service=Service();
+  const service= new Service();
 
 
   export default service
